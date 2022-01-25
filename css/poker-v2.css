@@ -1,0 +1,207 @@
+html {
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+
+}
+
+body {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+	background: rgb(33,29,28);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background: linear-gradient(
+		0deg, rgba(33,29,28,1) 0%,
+		rgba(56,58,63,1) 35%, 
+		rgba(55,57,61,1) 65%, 
+		rgba(33,29,28,1) 100%
+	);
+	color: #ffffff;
+}
+
+main {
+	margin: 0;
+	position: absolute;
+	display: block;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	height: 100vh;
+	min-height: 740px;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#game-container {
+	height: 55vh;
+	min-height: 500px;
+	width: 75vw;
+	min-width: 1000px;
+	z-index: 100;
+	margin: 0;
+	padding: 0;
+}
+
+#control-container {
+	z-index: 200;
+	margin: 0;
+	padding: 0;
+}
+
+#table-container {
+	position:relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin: auto;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+}
+
+#table-felt {
+	display: block;
+	position: absolute;
+	margin: auto;
+	height: 90%;
+	width: 90%;
+	padding: 0;
+	border-radius: 300px;
+	background: rgb(35, 140, 26);
+	background-image: 
+	url('../img/grey-felt-texture-tiny.png'),
+	linear-gradient(
+		90deg, 
+		rgb(21, 79, 26) 0%, 
+		rgb(35, 140, 26) 50%, 
+		rgba(21, 79, 26) 100%
+	);
+	z-index: 100;
+}
+
+#table-border {
+	display: block;
+	position: absolute;
+	margin: auto;
+	height: 100%;
+	width: 96%;
+	padding: 0;
+	border: 10px solid #211d1c;
+	border-radius: 400px;
+	background: rgb(33, 29, 28);
+	background-image: radial-gradient(
+		ellipse at center, 
+		rgb(125, 125, 125) 20%, 
+		rgba(33, 29, 28) 50%
+	);
+	background-size: 150% 150%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	z-index: 50;
+}
+
+#table-border-gradient-0{
+	display: block;
+	position: absolute;
+	margin: auto;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	border-radius: 400px;
+	background: #211d1c;
+}
+
+#table-border-gradient-1{
+	display: block;
+	position: absolute;
+	margin: 10px 10px 10px 10px;
+	height: calc(100% - 20px);
+	width: calc(100% - 20px);
+	padding: 0;
+	border-radius: 400px;
+	background: #2d2726;
+}
+
+#table-border-gradient-2{
+	display: block;
+	position: absolute;
+	margin: 15px 20px 15px 20px;
+	height: calc(100% - 30px);
+	width: calc(100% - 40px);
+	padding: 0;
+	border-radius: 400px;
+	background: #3c3635;
+}
+
+#table-border-gradient-3{
+	display: block;
+	position: absolute;
+	margin: 20px 25px 20px 25px;
+	height: calc(100% - 40px);
+	width: calc(100% - 50px);
+	padding: 0;
+	border-radius: 400px;
+	background: #46413f;
+}
+
+#table-border-gradient-4{
+	display: block;
+	position: absolute;
+	margin: 25px 30px 25px 30px;
+	height: calc(100% - 50px);
+	width: calc(100% - 60px);
+	padding: 0;
+	border-radius: 400px;
+	background: #4b4745;
+}
+
+#table-border-gradient-5{
+	display: block;
+	position: absolute;
+	margin: 30px 35px 30px 35px;
+	height: calc(100% - 60px);
+	width: calc(100% - 70px);
+	padding: 0;
+	border-radius: 400px;
+	background: #5c5856;
+}
+
+#table-border-gradient-6{
+	display: block;
+	position: absolute;
+	margin: 35px 40px 35px 40px;
+	height: calc(100% - 70px);
+	width: calc(100% - 80px);
+	padding: 0;
+	border-radius: 400px;
+	background: #6a6766;
+}
+
+#table-border-gradient-7{
+	display: block;
+	position: absolute;
+	margin: 40px 45px 40px 45px;
+	height: calc(100% - 80px);
+	width: calc(100% - 90px);
+	padding: 0;
+	border-radius: 400px;
+	background: #a2a09f;
+}
+
+
+
+
