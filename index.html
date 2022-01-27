@@ -9,144 +9,182 @@
 	<body>
 		<script type="module" language="javascript" src="./js/poker.js"></script>
 		<main>
-            <div id="card-container">
-                <div id="area-borders">
-                    <div class="hand-area-border"></div>
-                    <div class="deck-area-border"></div>
-                    <div class="hand-area-border"></div>
-                </div>
-                <div id="hands"></div>
-                <div id="deck"></div>
-                <!-- <div class="hand-container">
-                    <div class="card">
-                        <div class="card-back">
-                            <div class="card-back-gradient"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-back">
-                            <div class="card-back-gradient"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-back">
-                            <div class="card-back-gradient"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-back">
-                            <div class="card-back-gradient"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-back">
-                                <div class="card-back-gradient"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="deck-container">
-                    <div id="deck-bottom-container">
-                        <div class="deck-card">
-                            <div class="card-back">
-                                <div class="card-back-gradient"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="deck-top-container">
-                        <div class="deck-card">
-                            <div class="card-back">
-                                <div class="card-back-gradient"></div>
-                            </div>
-                        </div>
-                        <div class="deck-card">
-                            <div class="card-back">
-                                <div class="card-back-gradient"></div>
-                            </div>
-                        </div>
-                        <div class="deck-card">
-                            <div class="card-back">
-                                <div class="card-back-gradient"></div>
-                            </div>
-                        </div>
-                        <div class="deck-card">
-                            <div class="card-back">
-                                <div class="card-back-gradient"></div>
-                            </div>
-                        </div>
-                        <div class="deck-card">
-                            <div class="card-back">
-                                <div class="card-back-gradient"></div>
-                            </div>
-                        </div>
-                        <div class="deck-card">
-                            <div class="card-back">
-                                <div class="card-back-gradient"></div>
-                            </div>
-                        </div>
-                        <div class="deck-card">
-                            <div class="card-back">
-                                <div class="card-back-gradient"></div>
-                            </div>
-                        </div>
-                        <div class="deck-card">
-                            <div class="card-back">
-                                <div class="card-back-gradient"></div>
-                            </div>
-                        </div>
-                        <div class="deck-card">
-                            <div class="card-back">
-                                <div class="card-back-gradient"></div>
-                            </div>
-                        </div>
-                        <div class="deck-card">
-                            <div class="card-back">
-                                <div class="card-back-gradient"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hand-container">
-                    <div class="card">
-                        <div class="card-back">
-                            <div class="card-back-gradient"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-back">
-                            <div class="card-back-gradient"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-back">
-                            <div class="card-back-gradient"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-back">
-                            <div class="card-back-gradient"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-back">
-                            <div class="card-back-gradient"></div>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-			<div id="table-container">
-				<div id="table-felt"></div>
-				<div id="table-border">
-						<div id="table-border-gradient-0"></div>
-						<div id="table-border-gradient-1"></div>
-						<div id="table-border-gradient-2"></div>
-						<div id="table-border-gradient-3"></div>
-						<div id="table-border-gradient-4"></div>
-						<div id="table-border-gradient-5"></div>
-						<div id="table-border-gradient-6"></div>
-						<div id="table-border-gradient-7"></div>
+			<div id="game-table-wrapper">
+				<div id="card-container">
+					<div id="area-borders">
+						<div class="hand-area-border"></div>
+						<div class="deck-area-border"></div>
+						<div class="hand-area-border"></div>
+					</div>
+					<div id="hands">
+						<div id="hand-0" class="hand-container">
+							<div class="card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-back">
+										<div class="card-back-gradient"></div>
+								</div>
+							</div>
+						</div>
+						<div id="hand-spacer"></div>
+						<div id="hand-1" class="hand-container">
+							<div class="card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="deck">
+						<div class="deck-card">
+							<div class="card-back">
+								<div class="card-back-gradient"></div>
+							</div>
+						</div>
+					</div>
+					<!-- 
+					<div id="deck-container">
+						<div id="deck-bottom-container">
+							<div class="deck-card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+						</div>
+						<div id="deck-top-container">
+							<div class="deck-card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="deck-card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="deck-card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="deck-card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="deck-card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="deck-card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="deck-card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="deck-card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="deck-card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+							<div class="deck-card">
+								<div class="card-back">
+									<div class="card-back-gradient"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="hand-container">
+						<div class="card">
+							<div class="card-back">
+								<div class="card-back-gradient"></div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-back">
+								<div class="card-back-gradient"></div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-back">
+								<div class="card-back-gradient"></div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-back">
+								<div class="card-back-gradient"></div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-back">
+								<div class="card-back-gradient"></div>
+							</div>
+						</div>
+					</div> -->
+				</div>
+				<div id="table-container">
+					<div id="table-felt"></div>
+					<div id="table-border">
+							<div id="table-border-gradient-0"></div>
+							<div id="table-border-gradient-1"></div>
+							<div id="table-border-gradient-2"></div>
+							<div id="table-border-gradient-3"></div>
+							<div id="table-border-gradient-4"></div>
+							<div id="table-border-gradient-5"></div>
+							<div id="table-border-gradient-6"></div>
+							<div id="table-border-gradient-7"></div>
+					</div>
 				</div>
 			</div>
-            <!-- <div id="control-container"></div> -->
+			<div id="control-container"></div>
 		</main>
 	</body>
 </html>

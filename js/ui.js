@@ -7,11 +7,12 @@ let anteContainer = document.createElement(`div`);
 const setUi = (players, ante) => {
     // container.appendChild(container);
 
-    for (let i = 0; i < players; i++) {
-        let playerHandContainer = document.createElement(`div`);
-        playerHandContainer.setAttribute(`id`,`playerHandContainer${i}`);
-        container.appendChild(playerHandContainer);    
-    }
+    // unneeded
+    // for (let i = 0; i < players; i++) {
+    //     let playerHandContainer = document.getElementById(`${hand-[1]}`);
+    //     playerHandContainer.setAttribute(`id`,`playerHandContainer${i}`);
+    //     container.appendChild(playerHandContainer);    
+    // }
     
     dealtBtn.setAttribute(`id`,`dealBtn`);
     dealtBtn.setAttribute(`class`,`dealBtn`);
