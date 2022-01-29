@@ -45,7 +45,7 @@ const playBtn = (btnValue) => {
 
 const updateHands = (players, playerHands) => {
     for (let i = 0; i < players; i++) {
-        document.getElementById(`playerHandContainer${i}`).innerHTML = playerHands[i];
+        // document.getElementById(`playerHandContainer${i}`).innerHTML = playerHands[i];
     }
 }
 

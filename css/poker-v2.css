@@ -181,10 +181,13 @@ main {
 	background-color: #000000;
 	background-image: url('../img/card-back.png');
 	background-repeat: repeat;
+	perspective: 1000px;
 	padding: 0;
 }
 
 /* Deck */
+
+/* TODO: need to write breakpoints for animation */
 #deck {
 	position: absolute;
 	display: flex;
@@ -202,11 +205,10 @@ main {
 	border: 0;
 	border-radius: 20px;
 	padding: 0;
-	opacity: .8;
 }
 
 .deck-card {
-	position: relative;
+	position: absolute;
 	margin: 4% auto 4% auto;
 	height: 11vh;
 	min-height: 90px;
@@ -214,17 +216,133 @@ main {
 	min-width: 70px;
 	border: 0;
 	border-radius: 20px;
-	background-color: #000000;
-	background-image: url('../img/card-back.png');
-	background-repeat: repeat;
+	padding: 0;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+/* This container is needed to position the front and back side */
+.deck-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	border: 0;
+	border-radius: 20px;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+	text-align: center;
+}
+
+#deck-card-bottom {
+	z-index: 1;
+}
+
+/* TODO: need to write breakpoints for animation */
+#deck-card-0.animate {
+	z-index: 2;
+	transform: translate(-360px, -195px) rotate(360deg);
+	-webkit-transform: translate(-360px, -195px) rotate(360deg);
+	-o-transform: translate(-360px, -195px) rotate(360deg);
+	-moz-transform: translate(-360px, -195px) rotate(360deg);
+}
+
+#deck-card-1.animate {
+	z-index: 3;
+	transform: translate(-360px, 195px) rotate(360deg);
+	-webkit-transform: translate(-360px, 195px) rotate(360deg);
+	-o-transform: translate(-360px, 195px) rotate(360deg);
+	-moz-transform: translate(-360px, 195px) rotate(360deg);
+}
+
+#deck-card-2.animate {
+	z-index: 4;
+	transform: translate(-180px, -195px) rotate(360deg);
+	-webkit-transform: translate(-180px, -195px) rotate(360deg);
+	-o-transform: translate(-180px, -195px) rotate(360deg);
+	-moz-transform: translate(-180px, -195px) rotate(360deg);
+}
+
+#deck-card-3.animate {
+	z-index: 5;
+	transform: translate(-180px, 195px) rotate(360deg);
+	-webkit-transform: translate(-180px, 195px) rotate(360deg);
+	-o-transform: translate(-180px, 195px) rotate(360deg);
+	-moz-transform: translate(-180px, 195px) rotate(360deg);
+}
+
+#deck-card-4.animate {
+	z-index: 6;
+	transform: translate(0px, -195px) rotate(360deg);
+	-webkit-transform: translate(0px, -195px) rotate(360deg);
+	-o-transform: translate(0px, -195px) rotate(360deg);
+	-moz-transform: translate(0px, -195px) rotate(360deg);
+}
+
+#deck-card-5.animate {
+	z-index: 7;
+	transform: translate(0px, 195px) rotate(360deg);
+	-webkit-transform: translate(0px, 195px) rotate(360deg);
+	-o-transform: translate(0px, 195px) rotate(360deg);
+	-moz-transform: translate(0px, 195px) rotate(360deg);
+}
+
+#deck-card-6.animate {
+	z-index: 8;
+	transform: translate(180px, -195px) rotate(360deg);
+	-webkit-transform: translate(180px, -195px) rotate(360deg);
+	-o-transform: translate(180px, -195px) rotate(360deg);
+	-moz-transform: translate(180px, -195px) rotate(360deg);
+}
+
+#deck-card-7.animate {
+	z-index: 9;
+	transform: translate(180px, 195px) rotate(360deg);
+	-webkit-transform: translate(180px, 195px) rotate(360deg);
+	-o-transform: translate(180px, 195px) rotate(360deg);
+	-moz-transform: translate(180px, 195px) rotate(360deg);
+}
+
+#deck-card-8.animate {
+	z-index: 10;
+	transform: translate(360px, -195px) rotate(360deg);
+	-webkit-transform: translate(360px, -195px) rotate(360deg);
+	-o-transform: translate(360px, -195px) rotate(360deg);
+	-moz-transform: translate(360px, -195px) rotate(360deg);
+}
+
+#deck-card-9.animate {
+	z-index: 11;
+	transform: translate(360px, 195px) rotate(360deg);
+	-webkit-transform: translate(360px, 195px) rotate(360deg);
+	-o-transform: translate(360px, 195px) rotate(360deg);
+	-moz-transform: translate(360px, 195px) rotate(360deg);
+}
+
+/* Position the front and back side */
+.card-front, .card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	border: 0;
+	border-radius: 20px;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
 	padding: 0;
 }
 
-/* TODO: need a breakpoint to adjust gradient for smaller cards - with should do */
+.card-front {
+	background-color: #ffffff;
+}
+
+/* TODO: need a breakpoint to adjust gradient for smaller cards - width should do */
 .card-back {
-	position: relative;
-	height: 100%;
-	width: 100%;
+	background-color: #000000;
+	background-image: url('../img/card-back.png');
+	background-repeat: repeat;
 }
 
 .card-back-gradient {
@@ -256,7 +374,11 @@ main {
 		rgba(255, 100, 100, 0.1), 
 		transparent 100px
 	  );
-	padding: 0;
+}
+
+/* Do an horizontal flip */
+.card-flip {
+	transform: rotateY(180deg);
 }
 
 /* ===================================================== */
@@ -431,66 +553,3 @@ main {
 }
 
 /* ===================================================== */
-
-/* .hand-container {
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	margin: 4% auto 4% auto;
-	height: 21%;
-	width: 40%;
-	z-index: 150;
-	border: 5px solid #ffffff;
-	border-radius: 20px;
-	opacity: .8;
-} */
-
-/* #deck-container {
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	margin: auto;
-	height: 21%;
-	width: 40%;
-	border: 5px solid #ffffff;
-	border-radius: 20px;
-	z-index: 150;
-}
-
-#deck-bottom-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	margin: auto;
-	height: 21%;
-	width: 7%;
-	border: 5px solid #ffffff;
-	border-radius: 20px;
-	z-index: 150;
-}
-
-#deck-top-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	margin: auto;
-	height: 21%;
-	width: 7%;
-	border: 5px solid #ffffff;
-	border-radius: 20px;
-	z-index: 150;
-} */
